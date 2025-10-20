@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       message:
-        description: 'Enter a message'
+        description: 'Add MPW or Serv AccT'
         required: true
-        default: 'Hello from GitHub Actions!'
+        default: 'global\mpwxxxxxx'
 
 jobs:
   run-action:
