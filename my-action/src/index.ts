@@ -2,13 +2,13 @@ import * as core from '@actions/core';
 
 async function run(): Promise<void> {
   try {
-    const message: string = core.getInput('message');
-    console.log(`You entered: ${message}`);
+    const username = core.getInput('username'); // 👈 This stores the input in a variable
+    console.log(`Username entered: ${username}`);
+
+    // You can now use `username` anywhere in your logic
   } catch (error) {
     if (error instanceof Error) {
       core.setFailed(error.message);
-    } else {
-      core.setFailed('Unknown error occurred');
     }
   }
 }
